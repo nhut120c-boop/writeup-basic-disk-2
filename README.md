@@ -1,8 +1,8 @@
-# writeup: basic disk 2
+writeup: basic disk 2
 
 công cụ dùng: ftk imager, registry explorer, db browser for sqlite
 
-tìm build number
+câu 1: tìm build number
 
 em biết build number nằm trong registry hive `SOFTWARE` vì windows lưu toàn bộ thông tin phần mềm và hệ điều hành vào đó, cụ thể là key `Microsoft\Windows NT\CurrentVersion`, 
 
@@ -35,9 +35,9 @@ b5: nhìn khung bên phải, tìm 2 dòng:
 
 kết quả câu 1: `Win10-19043`
 
-## câu 2: tìm tài liệu bí mật và mật khẩu
+câu 2: tìm tài liệu bí mật và mật khẩu
 
-### tìm file tài liệu
+ tìm file tài liệu
 
 quay lại ftk imager, bới các thư mục của user k137:
 
