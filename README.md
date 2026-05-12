@@ -14,7 +14,7 @@ format flag: `Win[version]-[build]_{nội_dung_tài_liệu}`
 
 ## câu 1: tìm build number
 
-em biết build number nằm trong registry hive `SOFTWARE` vì windows lưu toàn bộ thông tin phần mềm và hệ điều hành vào đó, cụ thể là key `Microsoft\Windows NT\CurrentVersion`, đây là kiến thức cơ bản khi học forensics windows
+em biết build number nằm trong registry hive `SOFTWARE` vì windows lưu toàn bộ thông tin phần mềm và hệ điều hành vào đó, cụ thể là key `Microsoft\Windows NT\CurrentVersion`, 
 
 b1: mở file ảnh đĩa trong ftk imager, vào:
 
@@ -24,11 +24,11 @@ b1: mở file ảnh đĩa trong ftk imager, vào:
 
 b2: chuột phải vào file `SOFTWARE` → export file → lưu ra desktop
 
-ảnh: [chèn ảnh export file]
+<img width="1410" height="701" alt="image" src="https://github.com/user-attachments/assets/4d2690aa-fc00-4e83-9127-08de32141348" />
+
 
 b3: mở registry explorer, load file `SOFTWARE` vừa export vào
 
-nếu hiện bảng "load dirty hive?" thì chọn yes, cái này xảy ra vì file registry chưa được ghi đầy đủ xuống đĩa trước khi tạo ảnh
 
 b4: điều hướng trong cây bên trái tới:
 
