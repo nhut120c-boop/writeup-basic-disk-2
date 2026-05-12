@@ -30,20 +30,18 @@ b2: chuột phải vào file `SOFTWARE` → export file → lưu ra desktop
 b3: mở registry explorer, load file `SOFTWARE` vừa export vào
 
 
-b4: điều hướng trong cây bên trái tới:
+b4: tìm tới CurrentVersion trong:
 
 ```
 ROOT\Microsoft\Windows NT\CurrentVersion
 ```
 
+<img width="1547" height="875" alt="image" src="https://github.com/user-attachments/assets/2bc826d5-9b9d-40b2-b8bd-f01c6d94e1e0" />
+
 b5: nhìn khung bên phải, tìm 2 dòng:
 
-| key | value |
-|---|---|
-| `ProductName` | `Windows 10 Home Single Language` |
-| `CurrentBuild` | `19043` |
+<img width="695" height="370" alt="image" src="https://github.com/user-attachments/assets/33bf5e22-c36f-43cf-804c-4f2a72ab0fd2" />
 
-ảnh: [chèn ảnh registry explorer]
 
 kết quả câu 1: `Win10-19043`
 
