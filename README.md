@@ -12,7 +12,7 @@ b1: mở file ảnh đĩa trong ftk imager, vào:
 [root]\Windows\System32\config\
 ```
 
-b2: chuột phải vào file SOFTWARE → export file → lưu ra desktop
+b2: chuột phải vào file SOFTWARE -> export file -> lưu ra desktop
 
 <img width="1410" height="701" alt="image" src="https://github.com/user-attachments/assets/4d2690aa-fc00-4e83-9127-08de32141348" />
 
