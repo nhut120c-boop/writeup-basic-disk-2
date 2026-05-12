@@ -2,17 +2,7 @@
 
 công cụ dùng: ftk imager, registry explorer, db browser for sqlite
 
-## đề bài
-
-bài cho file ảnh đĩa `.ad1`, cần tìm:
-
-1. build number của windows trên máy nạn nhân
-
-2. nội dung tài liệu bí mật bị khóa mà người bạn gửi cho user
-
-format flag: `Win[version]-[build]_{nội_dung_tài_liệu}`
-
-## câu 1: tìm build number
+tìm build number
 
 em biết build number nằm trong registry hive `SOFTWARE` vì windows lưu toàn bộ thông tin phần mềm và hệ điều hành vào đó, cụ thể là key `Microsoft\Windows NT\CurrentVersion`, 
 
@@ -22,7 +12,7 @@ b1: mở file ảnh đĩa trong ftk imager, vào:
 [root]\Windows\System32\config\
 ```
 
-b2: chuột phải vào file `SOFTWARE` → export file → lưu ra desktop
+b2: chuột phải vào file SOFTWARE → export file → lưu ra desktop
 
 <img width="1410" height="701" alt="image" src="https://github.com/user-attachments/assets/4d2690aa-fc00-4e83-9127-08de32141348" />
 
