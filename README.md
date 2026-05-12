@@ -51,38 +51,47 @@ kết quả câu 1: `Win10-19043`
 
 quay lại ftk imager, bới các thư mục của user k137:
 
-```
-[root]\Users\k137\Downloads\
-[root]\Users\k137\Desktop\
-[root]\Users\k137\Documents\
-```
 
-tìm file nén hoặc tài liệu khả nghi → export ra ngoài
+ em chỉ thấy Appdata với Downloads
 
-ảnh: [chèn ảnh thư mục downloads]
 
-### tìm mật khẩu
+ <img width="627" height="105" alt="image" src="https://github.com/user-attachments/assets/b15b8eba-ff5d-422f-a412-d0dc469c8cd1" />
 
-em đoán mật khẩu lưu trong sticky notes vì đây là chỗ người dùng hay copy mật khẩu vào để nhớ tạm, và trong forensics windows thì sticky notes là artifact hay bị khai thác, nó lưu dữ liệu dưới dạng sqlite tại:
+ em lục vào appdata và tìm tới history của trình duyệt:
 
-```
-[root]\Users\k137\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\
-```
+ <img width="810" height="583" alt="image" src="https://github.com/user-attachments/assets/756d82c8-e3d0-4710-b652-568e3627ae38" />
 
-b1: export file `plum.sqlite` ra ngoài
+ sau đó export -> Desktop
 
-b2: mở bằng db browser for sqlite, vào tab browse data, chọn bảng `Note`, đọc nội dung
+ và dùng DB Browser đê tìm thêm thông tin 
 
-ảnh: [chèn ảnh db browser]
+ <img width="1370" height="322" alt="image" src="https://github.com/user-attachments/assets/6fc85b68-d2b9-4929-b8ad-8ba52f73e591" />
 
-b3: lấy mật khẩu từ note, dùng để mở file tài liệu đã export
+ em thấy user có tải winrar và 1 file exe lạ tên uwu, mà em lục không thấy
 
-ảnh: [chèn ảnh nội dung tài liệu]
+ em nghi ngờ đã được xóa nên em vào thùng rác
 
-kết quả câu 2: `{nội_dung_tài_liệu}`
+ <img width="662" height="305" alt="image" src="https://github.com/user-attachments/assets/a772b528-c1e6-4645-a4a7-226a28c5f312" />
 
-## flag
+ phát hiện các tệp lạ, và em tìm hiểu là 1 tệp khi bị xóa sẽ chia thành 2 phần, phần I là phần info và phần R là phần nội dung  
 
-```
-Win10-19043_{nội_dung_tài_liệu}
-```
+ em tìm dc 3 file là pass.txt chứ pass: p@$$w0rd3458
+
+
+và Kaxeetxe.txt chứa Q2F1c2VfSSdkX2RpZV9mb3JfeW91X1lvdV9rbm93X0knZF9zdGlsbF9kaWVfZm9yX3lvdQ==
+
+và Kaceetce.txt chứa aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==
+
+khi decode 2 cái ra em được Cause_I'd_die_for_you_You_know_I'd_still_die_for_you và https://www.youtube.com/watch?v=dQw4w9WgXcQ, truy cập vào link thì em bị 
+
+<img width="1907" height="1007" alt="image" src="https://github.com/user-attachments/assets/7b519008-f0f5-48be-a9a3-aebc0f3297d2" />
+
+
+em thấy Cause_I'd_die_for_you_You_know_I'd_still_die_for_you giống với format đề đưa ra, em nghĩ nó là content, ghép cái flag lại được
+
+KCSC{win10-19043_cause_i'd_die_for_you_you_know_i'd_still_die_for_you}
+
+em không có submit được nên không chắc đúng, tại em tháy còn nhiều cái em chưa khai thác được trong history của trình duyệt
+
+
+
